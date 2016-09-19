@@ -9,7 +9,7 @@ RUN apt-get update -qq && apt-get install -qqy \
     iptables
 
 # Install Docker from Docker Inc. repositories.
-RUN wget -qO- https://get.docker.com/ | sed 's/lxc-docker/lxc-docker-1.11.2/' | sh
+RUN curl -fsSL https://get.docker.com/ | sh
 
 # Install the wrapper script from https://raw.githubusercontent.com/docker/docker/master/hack/dind.
 ADD ./dind /usr/local/bin/dind
