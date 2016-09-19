@@ -1,7 +1,5 @@
 FROM ubuntu:14.04
 
-MAINTAINER Decheng Zhang <killercentury@gmail.com>
-
 # Let's start with some basic stuff.
 RUN apt-get update -qq && apt-get install -qqy \
     apt-transport-https \
